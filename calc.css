@@ -1,0 +1,56 @@
+:root{
+    --button-font:50px;
+    --hover-font:60px;
+}
+.calculator{
+    max-height: 90vh;
+    max-width: 400px;
+    margin:10vh auto 0 auto;
+    border: solid 10px black;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px 10px rgba(153, 153, 153, 1);
+}
+#display{
+    height:70px;
+    line-height: 70px;
+    border: solid 10px powderblue;
+    border-radius: 10%;
+    padding: 16px 7px;
+    margin: 5px;
+    text-align: right;
+    font-size: var(--button-font);
+    overflow: auto;
+}
+.buttons{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin:10px;
+}
+ .buttons>div{
+     border: solid 5px powderblue;
+     border-radius: 20%;
+ }
+ .button{
+     border:solid 2px cornflowerblue;
+     line-height: calc(10px + var(--hover-font));
+     margin:1px;
+     text-align: center;
+     font-size: var(--button-font);
+     cursor: pointer;
+ }
+ .button:hover{
+     background-color: lightblue;
+     font-size: var(--hover-font);
+     transition: 0.3s ease-in-out;
+ }
+
+ @media screen and (max-width:600px) {
+    :root{
+        --button-font:30px;
+        --hover-font:40px;
+    }
+    .calculator{
+        max-width:90%;
+    }
+ }
+ 
